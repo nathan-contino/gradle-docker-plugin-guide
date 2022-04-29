@@ -17,7 +17,7 @@ You'll create a docker image that prints "Hello, Gradle!" when run.
 ## Steps
 
 Follow these steps to create a new project from scratch,
-or check out the [complete sample project](TODO) for a working example.
+or check out the [complete sample project](https://github.com/nathan-contino/gradle-docker-plugin-guide) for a working example.
 
 ### 1. Create a Project Folder
 
@@ -46,8 +46,8 @@ When prompted, select:
 1. "Kotlin" as the build script DSL
 1. "no" to building with new APIs and behavior
 1. "Junit 4" as the test framework
-1. the default project name (input nothing and just press "enter")
-1. the default source package (input nothing and just press "enter")
+1. the default project name (input nothing and press "enter")
+1. the default source package (input nothing and press "enter")
 
 After completing the questionnaire, you should see output that resembles the
 following:
@@ -73,7 +73,7 @@ This generates a project with the following structure:
 │       │   │           └── App.java
 │       │   └── resources
 │       └── test
-│           ├── kotlin
+│           ├── java
 │           │   └── demo
 │           │       └── app
 │           │           └── AppTest.java
@@ -161,7 +161,7 @@ You should see output that resembles the following:
 Using images 'example-app/app:latest'.
 Step 1/7 : FROM adoptopenjdk/openjdk16
  ---> 7616401e09db
-Step 2/7 : LABEL maintainer=ncontino
+Step 2/7 : LABEL maintainer=example
  ---> Using cache
  ---> 5abeadb155e3
 Step 3/7 : WORKDIR /app
@@ -189,6 +189,7 @@ Created image with ID 'b3bbcd2e68a2'.
 > 🔥 Warning: Getting a Docker error? Make sure you've
 > - started Docker Desktop
 > - created (and logged into) a Docker account
+>
 > If you aren't logged in, you can't download Docker Images
 > from Docker Hub.
 
